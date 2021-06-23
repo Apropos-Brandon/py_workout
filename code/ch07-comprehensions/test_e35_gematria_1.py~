@@ -1,0 +1,7 @@
+from e35_gematria_1 import gematria_dict
+
+
+def test_gematria_dict():
+    d = gematria_dict()
+    assert type(d) == dict
+    assert len(d) == 26

@@ -1,0 +1,1 @@
+from e31_pig_latin_file import plword, plfile

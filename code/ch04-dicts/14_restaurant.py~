@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+
+menu = {'sandwich': 10, 'tea': 7, 'salad': 9} < 1 >
+
+total = 0
+while True:
+    <2 >
+    order = input("Order: ").strip() < 3 >
+
+    if not order:
+        <4 >
+        break
+
+    elif order in menu:
+        <5 >
+        price = menu[order]
+        total += price
+        print(f'{order} costs {price}, total is {total}')
+
+    else:
+        <6 >
+        print(f'We are fresh out of {order} today')
+
+print(f'Your total is {total}')

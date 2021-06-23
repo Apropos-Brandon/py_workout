@@ -1,0 +1,7 @@
+def menu(**options):
+    choice = input(f'Enter an option: ')
+
+    if choice in options:
+        return options[choice]()
+    else:
+        print(f'{choice} is not a valid option')

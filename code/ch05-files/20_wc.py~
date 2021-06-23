@@ -1,0 +1,17 @@
+filename = input("Enter a filename: ")
+
+counts = {'characters': 0,
+          'words': 0,
+          'lines': 0}
+unique_words = set() < 1 >
+
+for one_line in open(filename):
+    counts['lines'] += 1
+    counts['characters'] += len(one_line)
+    counts['words'] += len(one_line.split())
+
+    unique_words.update(one_line.split()) < 2 >
+
+counts['unique words'] = len(unique_words) < 3 >
+for key, value in counts.items():
+    print(f"{key}: {value}")

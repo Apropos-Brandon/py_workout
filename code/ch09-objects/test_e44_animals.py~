@@ -1,0 +1,11 @@
+from e44_animals import Animal, Wolf, Sheep, Snake, Parrot
+import pytest
+
+
+@pytest.mark.parametrize('species, color, output', [
+    (Wolf, 'black', 'black wolf, 4 legs'),
+    (Sheep, 'white', 'white sheep, 4 legs'),
+    (Snake, 'brown', 'brown snake, 0 legs'),
+    (Parrot, 'green', 'green parrot, 2 legs')
+    ])
+def test_animal(

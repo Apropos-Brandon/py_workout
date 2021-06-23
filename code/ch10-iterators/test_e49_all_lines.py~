@@ -1,0 +1,22 @@
+from e49_all_lines import all_lines
+
+
+@pytest.fixture
+def small_file(tmp_path):
+    f = tmp_path / 'smallfile.txt'
+    f.write_text('''This is the first line
+and this is the second line
+and this is, to no one's surprise, the third line
+but the biggest word will probably be encyclopedia''')
+    return f
+
+
+@pytest.fixture
+def big_file(tmp_path):
+    f = tmp_path / 'bigfile.txt'
+    f.write_text('''This is the first line of a big file
+
+and this is the second line
+and this is, to no one's surprise, the third line
+but the biggest word will probably be encyclopedia''')
+    return f

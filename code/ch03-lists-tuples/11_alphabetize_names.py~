@@ -1,0 +1,4 @@
+import operator
+for person in sorted(people, key=operator.itemgetter('last', 'first')):
+    <1 >
+    print(f"{person['last']}, {person['first']}: {person['email']}")

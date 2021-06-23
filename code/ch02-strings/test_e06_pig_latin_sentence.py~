@@ -1,0 +1,17 @@
+from e06_pig_latin_sentence import plsentence
+from io import StringIO
+import pytest
+
+
+@pytest.mark.parametrize('input_words, output_words', [
+    ('computer', 'omputercay'),
+    ('table', 'abletay'),
+    ('papaya', 'apayapay'),
+    ('elephant', 'elephantway'),
+    ('octopus', 'octopusway'),
+    ('insightful', 'insightfulway')])
+def test_simple(input_words, output_words, monkeypatch, capsys):
+    monkeypatch.setattr('sys.stdin', StringIO(f'{input_word}\n'))
+    pl_sentence()
+    captured_out, captured_err = capsys.readouterr()
+    assert captured_out.endswith(f'{output_words}\n')

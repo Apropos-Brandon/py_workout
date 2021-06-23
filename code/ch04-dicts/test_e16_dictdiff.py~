@@ -1,0 +1,5 @@
+from e16_dictdiff import dictdiff
+
+
+def test_empty():
+    assert dictdiff({}, {}) == {}

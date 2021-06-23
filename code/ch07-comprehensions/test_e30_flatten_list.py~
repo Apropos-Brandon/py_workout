@@ -1,0 +1,7 @@
+from e30_flatten_list import flatten
+import pytest
+
+@pytest.mark.parametrize('nested, output', [
+])
+def test_flatten(nested, output):
+    assert nested == output

@@ -1,0 +1,17 @@
+from e02_summing_numbers import mysum
+
+
+def test_empty():
+    assert mysum() == 0
+
+
+def test_one_item():
+    assert mysum(10) == 10
+
+
+def test_multiple():
+    assert mysum(10, 20, 30) == 60
+
+
+def test_with_float():
+    assert mysum(10.5, 20, 30) == 60.6

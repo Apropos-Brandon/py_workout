@@ -1,0 +1,4 @@
+from e26_calc import calc
+
+
+def test_simple():
